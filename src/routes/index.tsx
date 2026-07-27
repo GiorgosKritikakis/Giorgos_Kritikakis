@@ -167,7 +167,7 @@ function Index() {
                 Giorgos Kritikakis
               </h1>
               <p className="mb-8 text-lg font-medium text-muted-foreground">
-                Software Engineer &amp; Researcher
+                Software Engineer &amp; Applied Algorithms Researcher
               </p>
 
               <p className="max-w-[56ch] font-serif text-lg leading-relaxed text-pretty">
