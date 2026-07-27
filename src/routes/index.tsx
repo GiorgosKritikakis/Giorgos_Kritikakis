@@ -170,34 +170,37 @@ function Index() {
                 Software Engineer &amp; Researcher
               </p>
 
-              <div className="max-w-[56ch] space-y-4 font-serif text-lg leading-relaxed text-pretty">
-                <p>
-                  I am a product developer at{" "}
-                  <a
-                    href="https://www.tomsawyer.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
-                  >
-                    Tom Sawyer Software
-                  </a>{" "}
-                  and a researcher working at the intersection of graph theory and practical
-                  algorithm engineering — from cutting-edge research to shipped commercial products.
-                </p>
-                <p>
-                  I hold a BSc and an MSc in Computer Science from the{" "}
-                  <a
-                    href="https://www.uoc.gr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
-                  >
-                    University of Crete
-                  </a>
-                  , where I studied chain decomposition, transitive closure, linear-time
-                  sparsification and hierarchical graph drawing.
-                </p>
-              </div>
+              <p className="max-w-[56ch] font-serif text-lg leading-relaxed text-pretty">
+                Giorgos (George) Kritikakis is a software developer at{" "}
+                <a
+                  href="https://www.tomsawyer.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Tom Sawyer Software — graph and data visualization solutions"
+                  aria-label="Tom Sawyer Software website"
+                  className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
+                >
+                  Tom Sawyer Software
+                </a>
+                , where he designs and develops advanced graph-data federation and ETL tools,
+                including visual query builders and AI-powered text-to-query capabilities that
+                enable users to integrate and explore complex data without needing to understand
+                the underlying technologies. He also has a strong research background focused on
+                practical solutions to critical computational problems, with work published in
+                leading international research venues, and holds a BSc and MSc in Computer Science
+                from the{" "}
+                <a
+                  href="https://www.uoc.gr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="University of Crete — Official Website"
+                  aria-label="University of Crete website"
+                  className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
+                >
+                  University of Crete
+                </a>
+                .
+              </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
