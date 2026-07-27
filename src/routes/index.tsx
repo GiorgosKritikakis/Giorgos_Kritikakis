@@ -6,7 +6,7 @@ import thesis from "@/assets/thesis.pdf.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Giorgos Kritikakis — Software Engineer & Researcher" },
+      { title: "Giorgos Kritikakis — Software Engineer & Applied Algorithms Researcher" },
       {
         name: "description",
         content:
@@ -167,7 +167,7 @@ function Index() {
                 Giorgos Kritikakis
               </h1>
               <p className="mb-8 text-lg font-medium text-muted-foreground">
-                Software Engineer &amp; Researcher
+                Software Engineer &amp; Applied Algorithms Researcher
               </p>
 
               <p className="max-w-[56ch] font-serif text-lg leading-relaxed text-pretty">
