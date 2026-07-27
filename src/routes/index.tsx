@@ -171,7 +171,7 @@ function Index() {
               </p>
 
               <p className="max-w-[56ch] font-serif text-lg leading-relaxed text-pretty">
-                Giorgos (George) Kritikakis is a software developer at{" "}
+                Giorgos (George) Kritikakis is a software engineer at{" "}
                 <a
                   href="https://www.tomsawyer.com"
                   target="_blank"
