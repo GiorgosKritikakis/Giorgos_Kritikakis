@@ -54,7 +54,7 @@ const experience = [
   },
   {
     period: "2020 — 2024",
-    role: "Associate Researcher",
+    role: "Researcher / Software Engineer",
     org: "University of Crete — Graph and Information Visualization Laboratory",
     body: "Introduced algorithms addressing fundamental open problems in chain decomposition, transitive closure and hierarchical graph drawing, resulting in several publications and distinctions.",
   },
