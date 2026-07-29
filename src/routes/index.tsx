@@ -219,24 +219,6 @@ function Index() {
           </div>
         </section>
 
-        {/* Research */}
-        <section className="border-y border-border bg-card/50 px-6 py-16">
-          <div className="mx-auto max-w-screen-lg">
-            <h2 className="mb-12 text-sm font-semibold tracking-widest text-muted-foreground uppercase">
-              Research Specialization
-            </h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {research.map((item) => (
-                <div key={item.title} className="space-y-3">
-                  <h3 className="font-medium text-foreground">{item.title}</h3>
-                  <p className="max-w-[48ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Experience */}
         <section className="px-6 py-20">
