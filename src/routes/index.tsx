@@ -114,19 +114,23 @@ const education = [
 const skills: { group: string; items: string }[] = [
   {
     group: "Languages",
-    items: "Java · C++ · C · Python · JavaScript · TypeScript · OCaml · SQL · HTML · CSS",
+    items:
+      "Java · C++ · C · Python · JavaScript · TypeScript · OCaml · SQL · HTML · CSS · Shell scripting",
   },
   {
     group: "Frameworks & APIs",
-    items: "Spring Boot · Spring · Hibernate / JPA · React · REST · LLM integration",
+    items:
+      "Spring Boot · Spring · Hibernate / JPA · React · REST · Apache Flink · Apache Kafka · LLM integration · Full-stack web development",
   },
   {
     group: "Data",
-    items: "Neo4j · Cypher · Gremlin · SQL · Data analysis · Data visualization",
+    items:
+      "Neo4j · Cypher · Gremlin · Amazon Neptune · JanusGraph · OrientDB · SQL · Data analysis · Data visualization",
   },
   {
     group: "Tools & Testing",
-    items: "JUnit · Mockito · Selenium · Git · Maven · Docker · Jira · Linux · Shell",
+    items:
+      "JUnit · Mockito · Selenium · Git · GitHub · Maven · Docker · Containerization · Jira · Linux · Shell · LaTeX",
   },
 ];
 
