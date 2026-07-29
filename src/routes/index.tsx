@@ -355,37 +355,6 @@ function Index() {
           </div>
         </section>
 
-        <footer className="border-t border-border bg-card/50 px-6 py-12">
-          <div className="mx-auto flex max-w-screen-lg flex-col items-center justify-between gap-6 md:flex-row">
-            <p className="text-xs text-subtle italic">
-              Typeset in Geist and Source Serif 4. Built for the web.
-            </p>
-            <div className="flex gap-8">
-              <a
-                href="https://github.com/GiorgosKritikakis"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.tomsawyer.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Tom Sawyer Software
-              </a>
-              <a
-                href="mailto:georgecretek@gmail.com"
-                className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Email
-              </a>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );
