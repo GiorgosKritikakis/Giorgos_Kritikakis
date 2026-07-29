@@ -70,6 +70,7 @@ const publications = [
   {
     tag: "SEA 2023",
     title: "Fast Reachability Using DAG Decomposition",
+    href: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SEA.2023.2",
     authors:
       "Giorgos Kritikakis, Ioannis G. Tollis — 21st International Symposium on Experimental Algorithms",
   },
