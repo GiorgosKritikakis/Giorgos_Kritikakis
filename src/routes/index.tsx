@@ -259,9 +259,20 @@ function Index() {
                   <span className="mb-2 block text-xs font-medium tracking-wide text-subtle uppercase">
                     {pub.tag}
                   </span>
-                  <p className="font-serif text-lg leading-tight text-balance transition-colors group-hover:text-muted-foreground">
-                    {pub.title}
-                  </p>
+                  {pub.href ? (
+                    <a
+                      href={pub.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-serif text-lg leading-tight text-balance underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
+                    >
+                      {pub.title}
+                    </a>
+                  ) : (
+                    <p className="font-serif text-lg leading-tight text-balance transition-colors group-hover:text-muted-foreground">
+                      {pub.title}
+                    </p>
+                  )}
                   <p className="mt-2 text-sm text-muted-foreground">{pub.authors}</p>
                 </div>
               ))}
