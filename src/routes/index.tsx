@@ -25,24 +25,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const research = [
-  {
-    title: "Chain / Path Decomposition",
-    body: "Fast, practical decomposition of directed acyclic graphs into chains — currently the fastest approach both theoretically and in practice, with results very close to the optimum.",
-  },
-  {
-    title: "Transitive Closure & Reachability",
-    body: "A linear-time sparsification technique that yields new bounds for transitive closure, together with an indexing scheme and extensive experiments on what really drives performance.",
-  },
-  {
-    title: "Path-Based Framework (PBF)",
-    body: "A general-purpose hierarchical graph drawing framework, evaluated against state-of-the-art solutions and validated with a user study.",
-  },
-  {
-    title: "Visual Query & Data Federation",
-    body: "Visual query builders and AI-powered text-to-query tools that let users explore graph databases without knowing the query language underneath.",
-  },
-];
 
 const experience = [
   {
