@@ -62,8 +62,9 @@ const experience = [
 
 const publications = [
   {
-    tag: "ArXiv • Apr 2024",
+    tag: "JGAA 2026",
     title: "Parameterized Linear Time Transitive Closure",
+    href: "https://www.jgaa.info/index.php/jgaa/article/view/3148",
     authors: "Giorgos Kritikakis, Ioannis G. Tollis",
   },
   {
