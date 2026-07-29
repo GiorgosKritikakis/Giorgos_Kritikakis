@@ -77,6 +77,7 @@ const publications = [
   {
     tag: "IEEE Access • May 2023",
     title: "Experiments and a User Study for Hierarchical Drawings of Graphs",
+    href: "https://ieeexplore.ieee.org/document/10138391/",
     authors: "Panagiotis Lionakis, Giorgos Kritikakis, Ioannis G. Tollis",
   },
   {
