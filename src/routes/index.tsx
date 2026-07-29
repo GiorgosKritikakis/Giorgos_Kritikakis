@@ -83,6 +83,7 @@ const publications = [
   {
     tag: "ArXiv • Dec 2022",
     title: "Fast and Practical DAG Decomposition with Reachability Applications",
+    href: "https://arxiv.org/abs/2212.03945",
     authors: "Giorgos Kritikakis, Ioannis G. Tollis",
   },
   {
