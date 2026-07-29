@@ -65,7 +65,7 @@ const publications = [
     tag: "JGAA 2026",
     title: "Parameterized Linear Time Transitive Closure",
     href: "https://www.jgaa.info/index.php/jgaa/article/view/3148",
-    authors: "Giorgos Kritikakis, Ioannis G. Tollis",
+    authors: "Giorgos Kritikakis, Ioannis G. Tollis — Journal of Graph Algorithms and Applications",
   },
   {
     tag: "SEA 2023",
