@@ -50,7 +50,13 @@ const experience = [
     period: "2020 — 2022",
     role: "Teaching Assistant",
     org: "University of Crete",
-    body: "CS-484 Complex Network Dynamics, CS-380 Algorithms and Complexity, CS-486 Principles of Distributed Computing.",
+    body: (
+      <>
+        CS-484 Complex Network Dynamics<br />
+        CS-380 Algorithms and Complexity<br />
+        CS-486 Principles of Distributed Computing.
+      </>
+    ),
   },
   {
     period: "2019 — 2020",
