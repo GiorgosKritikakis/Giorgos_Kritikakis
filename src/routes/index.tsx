@@ -177,7 +177,7 @@ function Index() {
                 enable users to integrate and explore complex data without needing to understand
                 the underlying technologies. He also has a strong research background focused on
                 practical solutions to critical computational problems, with work published in
-                leading international research venues, and holds a BSc and MSc in Computer Science
+                leading international research venues. He holds a BSc and MSc in Computer Science
                 from the{" "}
                 <a
                   href="https://www.uoc.gr"
