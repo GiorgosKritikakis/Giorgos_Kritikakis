@@ -104,16 +104,15 @@ const education = [
   {
     year: "2022",
     degree: "M.Sc. in Computer Science, University of Crete",
-    detail:
-      "Thesis: Analysis and Visualization of Hierarchical Graphs. Algorithms and Systems Analysis; Parallel and Distributed Systems.",
-    href: thesis.url,
-    hrefLabel: "Read thesis (PDF)",
+    thesis: "Thesis: Analysis and Visualization of Hierarchical Graphs.",
+    area: "Algorithms and Systems Analysis; Parallel and Distributed Systems.",
   },
   {
     year: "2020",
     degree: "B.Sc. in Computer Science, University of Crete",
-    detail:
-      "Thesis: Extension of the PARTEE runtime system with support for dynamic memory allocation. Software Systems and Applications.",
+    thesis:
+      "Thesis: Extension of the PARTEE runtime system with support for dynamic memory allocation.",
+    area: "Software Systems and Applications.",
   },
 ];
 
@@ -296,18 +295,11 @@ function Index() {
                   <div>
                     <h3 className="font-medium text-foreground">{ed.degree}</h3>
                     <p className="mt-2 max-w-[56ch] text-sm leading-relaxed text-pretty text-muted-foreground">
-                      {ed.detail}
+                      {ed.thesis}
                     </p>
-                    {ed.href ? (
-                      <a
-                        href={ed.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-3 inline-block text-sm font-medium underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
-                      >
-                        {ed.hrefLabel}
-                      </a>
-                    ) : null}
+                    <p className="mt-2 max-w-[56ch] text-sm leading-relaxed text-pretty text-muted-foreground">
+                      {ed.area}
+                    </p>
                   </div>
                 </div>
               ))}
