@@ -177,19 +177,7 @@ function Index() {
                 enable users to integrate and explore complex data without needing to understand
                 the underlying technologies. He also has a strong research background focused on
                 practical solutions to critical computational problems, with work published in
-                leading international research venues. He holds a BSc and MSc in Computer Science
-                from the{" "}
-                <a
-                  href="https://www.uoc.gr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="University of Crete — Official Website"
-                  aria-label="University of Crete website"
-                  className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-muted-foreground"
-                >
-                  University of Crete
-                </a>
-                .
+                leading international research venues. He holds a BSc and MSc in Computer Science.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
