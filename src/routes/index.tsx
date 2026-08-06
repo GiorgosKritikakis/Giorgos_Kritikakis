@@ -251,7 +251,7 @@ function Index() {
         <section className="border-y border-border bg-card/50 px-6 py-20">
           <div className="mx-auto max-w-screen-lg">
             <h2 className="mb-12 text-sm font-semibold tracking-widest text-muted-foreground uppercase">
-              Selected Publications
+              Publications
             </h2>
             <div className="space-y-8">
               {publications.map((pub) => (
