@@ -30,13 +30,13 @@ export function NetworkBackground() {
     const initNodes = () => {
       const rect = canvas.getBoundingClientRect();
       const area = rect.width * rect.height;
-      const count = Math.min(70, Math.max(28, Math.floor(area / 16000)));
+      const count = Math.min(42, Math.max(20, Math.floor(area / 24000)));
       nodesRef.current = Array.from({ length: count }, () => ({
         x: Math.random() * rect.width,
         y: Math.random() * rect.height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        radius: Math.random() * 1.6 + 1.4,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        radius: Math.random() * 1.0 + 0.8,
       }));
     };
 
@@ -61,14 +61,14 @@ export function NetworkBackground() {
       }
 
       ctx.strokeStyle = colors.line;
-      ctx.lineWidth = 0.9;
+      ctx.lineWidth = 0.5;
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 170) {
-            ctx.globalAlpha = (1 - dist / 170) * 0.55;
+          if (dist < 120) {
+            ctx.globalAlpha = (1 - dist / 120) * 0.35;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -77,7 +77,7 @@ export function NetworkBackground() {
         }
       }
 
-      ctx.globalAlpha = 0.75;
+      ctx.globalAlpha = 0.45;
       ctx.fillStyle = colors.node;
       for (const node of nodes) {
         ctx.beginPath();
