@@ -147,9 +147,7 @@ const skills: { group: string; items: string }[] = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-muted">
-      <div className="pointer-events-none fixed inset-0 graph-paper opacity-40" aria-hidden="true" />
-
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 font-sans text-foreground selection:bg-muted">
       <main className="relative">
         {/* Hero */}
         <section className="px-6 py-16 md:py-24">
