@@ -137,6 +137,11 @@ const skills: { group: string; items: string }[] = [
     items:
       "JUnit · Mockito · Selenium · Git · GitHub · Maven · Docker · Containerization · Jira · Linux · Shell · LaTeX",
   },
+  {
+    group: "Professional Skills",
+    items:
+      "Agile methodology · Project management · Product roadmapping · Communication · Teaching · Research skills",
+  },
 ];
 
 function Index() {
