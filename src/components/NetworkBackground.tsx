@@ -61,14 +61,14 @@ export function NetworkBackground() {
       }
 
       ctx.strokeStyle = colors.line;
-      ctx.lineWidth = 0.9;
+      ctx.lineWidth = 0.5;
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 170) {
-            ctx.globalAlpha = (1 - dist / 170) * 0.55;
+          if (dist < 120) {
+            ctx.globalAlpha = (1 - dist / 120) * 0.35;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -77,7 +77,7 @@ export function NetworkBackground() {
         }
       }
 
-      ctx.globalAlpha = 0.75;
+      ctx.globalAlpha = 0.45;
       ctx.fillStyle = colors.node;
       for (const node of nodes) {
         ctx.beginPath();
