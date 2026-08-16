@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Mail } from "lucide-react";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import cv from "@/assets/cv.pdf.asset.json";
 import thesis from "@/assets/thesis.pdf.asset.json";
@@ -215,7 +216,8 @@ function Index() {
                   Download CV
                 </a>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
+              <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="size-4 shrink-0" aria-hidden="true" />
                 Contact{" "}
                 <a
                   href="mailto:georgecretek@gmail.com"
