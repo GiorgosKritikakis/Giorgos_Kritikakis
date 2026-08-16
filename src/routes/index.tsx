@@ -216,6 +216,7 @@ function Index() {
                 </a>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
+                Contact{" "}
                 <a
                   href="mailto:georgecretek@gmail.com"
                   className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-foreground"
