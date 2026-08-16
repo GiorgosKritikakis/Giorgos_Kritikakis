@@ -1,0 +1,115 @@
+import { useEffect, useRef } from "react";
+
+interface Node {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+}
+
+export function NetworkBackground() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const nodesRef = useRef<Node[]>([]);
+  const frameRef = useRef<number>(0);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.scale(dpr, dpr);
+    };
+
+    const initNodes = () => {
+      const rect = canvas.getBoundingClientRect();
+      const area = rect.width * rect.height;
+      const count = Math.min(42, Math.max(18, Math.floor(area / 28000)));
+      nodesRef.current = Array.from({ length: count }, () => ({
+        x: Math.random() * rect.width,
+        y: Math.random() * rect.height,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        radius: Math.random() * 1.2 + 0.8,
+      }));
+    };
+
+    const colors = (() => {
+      const style = getComputedStyle(canvas);
+      return {
+        line: style.getPropertyValue("--subtle").trim() || "oklch(0.705 0.015 286.067)",
+        node: style.getPropertyValue("--muted-foreground").trim() || "oklch(0.442 0.017 285.786)",
+      };
+    })();
+
+    const draw = () => {
+      const rect = canvas.getBoundingClientRect();
+      ctx.clearRect(0, 0, rect.width, rect.height);
+      const nodes = nodesRef.current;
+
+      for (const node of nodes) {
+        node.x += node.vx;
+        node.y += node.vy;
+        if (node.x < 0 || node.x > rect.width) node.vx *= -1;
+        if (node.y < 0 || node.y > rect.height) node.vy *= -1;
+      }
+
+      ctx.strokeStyle = colors.line;
+      ctx.lineWidth = 0.5;
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 130) {
+            ctx.globalAlpha = (1 - dist / 130) * 0.22;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      ctx.globalAlpha = 0.3;
+      ctx.fillStyle = colors.node;
+      for (const node of nodes) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.globalAlpha = 1;
+      frameRef.current = requestAnimationFrame(draw);
+    };
+
+    const handleResize = () => {
+      resize();
+      initNodes();
+    };
+
+    resize();
+    initNodes();
+    window.addEventListener("resize", handleResize);
+    frameRef.current = requestAnimationFrame(draw);
+
+    return () => {
+      cancelAnimationFrame(frameRef.current);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-60"
+    />
+  );
+}
