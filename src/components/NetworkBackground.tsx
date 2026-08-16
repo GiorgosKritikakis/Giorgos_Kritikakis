@@ -30,13 +30,13 @@ export function NetworkBackground() {
     const initNodes = () => {
       const rect = canvas.getBoundingClientRect();
       const area = rect.width * rect.height;
-      const count = Math.min(70, Math.max(28, Math.floor(area / 16000)));
+      const count = Math.min(42, Math.max(20, Math.floor(area / 24000)));
       nodesRef.current = Array.from({ length: count }, () => ({
         x: Math.random() * rect.width,
         y: Math.random() * rect.height,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: (Math.random() - 0.5) * 0.35,
-        radius: Math.random() * 1.6 + 1.4,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        radius: Math.random() * 1.0 + 0.8,
       }));
     };
 
