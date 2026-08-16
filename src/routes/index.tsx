@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Mail } from "lucide-react";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import cv from "@/assets/cv.pdf.asset.json";
 import thesis from "@/assets/thesis.pdf.asset.json";
