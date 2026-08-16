@@ -190,7 +190,7 @@ function Index() {
                 leading international research venues. He holds a BSc and MSc in Computer Science.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
                   href={cv.url}
                   target="_blank"
@@ -221,6 +221,14 @@ function Index() {
                   Contact
                 </a>
               </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                <a
+                  href="mailto:georgecretek@gmail.com"
+                  className="underline decoration-border-strong underline-offset-4 transition-colors hover:text-foreground"
+                >
+                  georgecretek@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </section>
@@ -330,22 +338,6 @@ function Index() {
             </div>
           </div>
         </section>
-
-        {/* Contact */}
-        <section className="px-6 py-20">
-          <div className="mx-auto max-w-screen-lg">
-            <h2 className="mb-8 text-sm font-semibold tracking-widest text-muted-foreground uppercase">
-              Contact
-            </h2>
-            <a
-              href="mailto:georgecretek@gmail.com"
-              className="font-serif text-2xl underline decoration-border-strong underline-offset-8 transition-colors hover:text-muted-foreground md:text-3xl"
-            >
-              georgecretek@gmail.com
-            </a>
-          </div>
-        </section>
-
       </main>
     </div>
   );
