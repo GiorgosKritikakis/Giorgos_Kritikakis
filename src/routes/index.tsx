@@ -339,22 +339,6 @@ function Index() {
           </div>
         </section>
 
-        {/* Contact */}
-        <section className="px-6 py-20">
-          <div className="mx-auto max-w-screen-lg">
-            <h2 className="mb-8 text-sm font-semibold tracking-widest text-muted-foreground uppercase">
-              Contact
-            </h2>
-            <a
-              href="mailto:georgecretek@gmail.com"
-              className="font-serif text-2xl underline decoration-border-strong underline-offset-8 transition-colors hover:text-muted-foreground md:text-3xl"
-            >
-              georgecretek@gmail.com
-            </a>
-          </div>
-        </section>
-
-      </main>
     </div>
   );
 }
