@@ -214,12 +214,6 @@ function Index() {
                   </svg>
                   Download CV
                 </a>
-                <a
-                  href="mailto:georgecretek@gmail.com"
-                  className="inline-flex items-center rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground ring-1 ring-foreground/5 transition-colors hover:bg-muted"
-                >
-                  Contact
-                </a>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
                 <a
