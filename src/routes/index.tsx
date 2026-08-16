@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail } from "lucide-react";
+import { NetworkBackground } from "@/components/NetworkBackground";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import cv from "@/assets/cv.pdf.asset.json";
 import thesis from "@/assets/thesis.pdf.asset.json";
@@ -150,8 +151,9 @@ function Index() {
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 font-sans text-foreground selection:bg-muted">
       <main className="relative">
         {/* Hero */}
-        <section className="px-6 py-16 md:py-24">
-          <div className="mx-auto flex max-w-screen-lg flex-col items-start gap-12 md:flex-row">
+        <section className="relative overflow-hidden px-6 py-16 md:py-24">
+          <NetworkBackground />
+          <div className="relative mx-auto flex max-w-screen-lg flex-col items-start gap-12 md:flex-row">
             <div className="w-full shrink-0 fade-up md:w-1/3">
               <img
                 src={portrait.url}
