@@ -109,7 +109,7 @@ export function NetworkBackground() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-100"
+      className="pointer-events-none absolute inset-0 z-0 h-full w-full opacity-100"
     />
   );
 }
