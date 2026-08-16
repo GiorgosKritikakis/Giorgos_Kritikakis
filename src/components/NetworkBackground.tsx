@@ -24,27 +24,27 @@ export function NetworkBackground() {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
-      ctx.scale(dpr, dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     const initNodes = () => {
       const rect = canvas.getBoundingClientRect();
       const area = rect.width * rect.height;
-      const count = Math.min(42, Math.max(18, Math.floor(area / 28000)));
+      const count = Math.min(70, Math.max(28, Math.floor(area / 16000)));
       nodesRef.current = Array.from({ length: count }, () => ({
         x: Math.random() * rect.width,
         y: Math.random() * rect.height,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: (Math.random() - 0.5) * 0.25,
-        radius: Math.random() * 1.2 + 0.8,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        radius: Math.random() * 1.6 + 1.4,
       }));
     };
 
     const colors = (() => {
       const style = getComputedStyle(canvas);
       return {
-        line: style.getPropertyValue("--subtle").trim() || "oklch(0.705 0.015 286.067)",
-        node: style.getPropertyValue("--muted-foreground").trim() || "oklch(0.442 0.017 285.786)",
+        line: style.getPropertyValue("--muted-foreground").trim() || "oklch(0.442 0.017 285.786)",
+        node: style.getPropertyValue("--foreground").trim() || "oklch(0.21 0.006 285.885)",
       };
     })();
 
@@ -61,14 +61,14 @@ export function NetworkBackground() {
       }
 
       ctx.strokeStyle = colors.line;
-      ctx.lineWidth = 0.5;
+      ctx.lineWidth = 0.9;
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
-            ctx.globalAlpha = (1 - dist / 130) * 0.22;
+          if (dist < 170) {
+            ctx.globalAlpha = (1 - dist / 170) * 0.55;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -77,7 +77,7 @@ export function NetworkBackground() {
         }
       }
 
-      ctx.globalAlpha = 0.3;
+      ctx.globalAlpha = 0.75;
       ctx.fillStyle = colors.node;
       for (const node of nodes) {
         ctx.beginPath();
@@ -109,7 +109,7 @@ export function NetworkBackground() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-60"
+      className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-100"
     />
   );
 }
