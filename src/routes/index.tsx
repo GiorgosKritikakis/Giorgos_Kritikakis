@@ -216,7 +216,8 @@ function Index() {
                   Download CV
                 </a>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
+              <p className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="size-4 shrink-0" aria-hidden="true" />
                 Contact{" "}
                 <a
                   href="mailto:georgecretek@gmail.com"
