@@ -19,6 +19,6 @@ export default defineConfig({
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   vite: {
-    base: "/Giorgos_Kritikakis/",
+    base: "/Landing_Page/",
   },
 });
