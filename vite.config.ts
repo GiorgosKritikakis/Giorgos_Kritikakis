@@ -19,6 +19,6 @@ export default defineConfig({
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   vite: {
-    base: "/Landing_Page/",
+    base: "/LandingPage/",
   },
 });
