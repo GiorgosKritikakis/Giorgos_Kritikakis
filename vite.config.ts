@@ -13,7 +13,9 @@ export default defineConfig({
     server: { entry: "server" },
     // Render every page to plain HTML files at build time so the site can be
     // hosted as static files (e.g. GitHub Pages).
-    pages: [{ path: "/" }],
+    // crawlLinks off: the builder was following the CV download link and
+    // failing on GitHub's runner. Links on the page don't need build-time checks.
+    pages: [{ path: "/", prerender: { crawlLinks: false } }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   vite: {
