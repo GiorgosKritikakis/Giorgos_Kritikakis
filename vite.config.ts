@@ -13,6 +13,6 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    base: "/my-app/",
+    base: "/Giorgos_Kritikakis/",
   },
 });
