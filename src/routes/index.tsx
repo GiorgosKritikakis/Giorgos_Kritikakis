@@ -155,7 +155,7 @@ function Index() {
           <div className="relative mx-auto flex max-w-screen-lg flex-col items-start gap-12 md:flex-row">
             <div className="w-full shrink-0 fade-up md:w-1/3">
               <img
-                src={portrait.url}
+                src={portrait}
                 alt="Portrait of Giorgos Kritikakis"
                 width={1080}
                 height={1350}
@@ -192,7 +192,7 @@ function Index() {
 
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
-                  href={cv.url}
+                  href={cv}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center rounded-md bg-primary py-2 pr-3 pl-2 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-opacity hover:opacity-90"
