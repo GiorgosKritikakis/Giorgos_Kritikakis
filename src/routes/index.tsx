@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail } from "lucide-react";
 import { NetworkBackground } from "@/components/NetworkBackground";
-import portrait from "@/assets/portrait.png.asset.json";
-import cv from "@/assets/cv.pdf.asset.json";
-import thesis from "@/assets/thesis.pdf.asset.json";
+import portrait from "@/assets/portrait.png";
+import cv from "@/assets/CV.pdf?url";
 
 export const Route = createFileRoute("/")({
   head: () => ({
