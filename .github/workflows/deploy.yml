@@ -40,10 +40,16 @@ jobs:
 
       - name: Prepare static output
         run: |
-          test -f dist/client/index.html
-          touch dist/client/.nojekyll
-          cp dist/client/index.html dist/client/404.html
-          ls -la dist/client
+          # The build writes static files to dist/client or .output/public
+          # depending on the environment — pick whichever exists.
+          if [ -f dist/client/index.html ]; then OUT=dist/client;
+          elif [ -f .output/public/index.html ]; then OUT=.output/public;
+          else echo "No static build output found"; ls -la dist .output 2>/dev/null; exit 1; fi
+          echo "Using output dir: $OUT"
+          echo "OUT_DIR=$OUT" >> "$GITHUB_ENV"
+          touch "$OUT/.nojekyll"
+          cp "$OUT/index.html" "$OUT/404.html"
+          ls -la "$OUT"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -51,7 +57,7 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist/client
+          path: ./${{ env.OUT_DIR }}
 
       - name: Deploy
         id: deployment
